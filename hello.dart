@@ -18,9 +18,12 @@
 void main() {
   RekeningBank rekeningFachrul = new RekeningBank(
       namaPemilik: "Fachrul Faathirullah", namaBank: "Bank BRI", saldo: 20000);
-
+  RekeningBank rekeningFachrul1 = new RekeningBank.owo(
+      namaPemilik: "Fachrul Faathirullah", namaBank: "OWO", saldo: 44);
   rekeningFachrul.setSaldo = 5000000;
+  rekeningFachrul1.setSaldo = 200000000000000;
   print(rekeningFachrul.saldo);
+  print(rekeningFachrul1.namaBank);
 }
 
 class RekeningBank {
@@ -29,6 +32,7 @@ class RekeningBank {
   var saldo;
 
   RekeningBank({this.saldo, this.namaBank, this.namaPemilik});
+  RekeningBank.owo({this.saldo, this.namaBank, this.namaPemilik});
   set setSaldo(int saldoBaru) {
     this.saldo = saldoBaru;
   }
